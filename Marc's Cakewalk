@@ -1,0 +1,34 @@
+/*
+Input Format
+
+The first line contains an integer,n , denoting the number of cupcakes. 
+The second line contains  space-separated integers describing the respective calorie counts of each cupcake, 
+c0,c1,...cn.
+
+Output Format
+
+Print a long integer denoting the minimum number of miles Marc must walk to maintain his weight.
+
+Approach: sort the list in descending order and use the format.
+
+*/
+
+#!/bin/python3
+
+import sys
+
+def marcsCakewalk(calorie):
+    # Complete this function
+    calorie.sort(reverse=True)
+    z=0
+    for i in range(n):
+        z=z+calorie[i]*(2**i)
+    return z
+
+if __name__ == "__main__":
+    n = int(input().strip())
+    calorie = list(map(int, input().strip().split(' ')))
+    result = marcsCakewalk(calorie)
+    print(result)
+
+
